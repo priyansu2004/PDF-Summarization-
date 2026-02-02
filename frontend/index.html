@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📄 PDF Summarizer</h1>
+
+        <!-- PDF Upload Section -->
+        <div class="upload-section">
+            <label class="upload-label" for="pdfInput">Upload PDF File:</label>
+            <input type="file" id="pdfInput" accept=".pdf" />
+            <div class="file-name" id="fileName"></div>
+        </div>
+
+        <!-- Chatbox Section -->
+        <div class="chatbox-section">
+            <label class="chatbox-label" for="chatbox">Enter your question or prompt:</label>
+            <textarea id="chatbox" placeholder="Ask a question about the PDF or request a summary..."></textarea>
+        </div>
+
+        <!-- Send Button Section -->
+        <div class="button-section">
+            <button id="sendBtn">Send</button>
+        </div>
+
+        <!-- Loader Section -->
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <div class="loader-text">Processing your request...</div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section" id="outputSection">
+            <div class="output-label">Summary Result:</div>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
