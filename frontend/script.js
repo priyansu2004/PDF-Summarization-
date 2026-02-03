@@ -6,7 +6,7 @@ const outputSection = document.getElementById('outputSection');
 const output = document.getElementById('output');
 const fileName = document.getElementById('fileName');
 
-const API_URL = 'http://127.0.0.1:8000';
+// const API_URL = 'http://127.0.0.1:8000';
 
 pdfInput.addEventListener('change', function(e) {
     if (e.target.files.length > 0) {
@@ -45,7 +45,7 @@ sendBtn.addEventListener('click', async function(e) {
     formData.append('text', question);
 
     try {
-        const response = await fetch(`${API_URL}/answer`, {
+        const response = await fetch(`/answer`, {
             method: 'POST',
             body: formData
         });

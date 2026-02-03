@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from summerize import process_pdf_and_query
 import os
 import shutil
-
+from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 
 app.add_middleware(
@@ -40,3 +40,7 @@ async def get_answer(
 @app.get("/hello")
 def read_root():
     return {"message": "Hello, World!"}
+
+
+
+app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
