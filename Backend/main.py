@@ -1,6 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
-from summerize import process_pdf_and_query
+from .summerize import process_pdf_and_query
 import os
 import shutil
 from fastapi.staticfiles import StaticFiles
